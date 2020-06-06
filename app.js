@@ -1,10 +1,17 @@
-let grid=document.querySelector(".grid");
-let squares=Array.from(document.querySelectorAll(".grid .grid-blocks"));
+let grid=document.querySelector(".grid"); // USED IN THE scoreCalculation METHOD
+let squares=Array.from(document.querySelectorAll(".grid .grid-blocks")); // FOR THE GRID
 let displaySquares=Array.from(document.querySelectorAll(".mini-grid .grid-blocks")); // FOR THE MINI GRID
-const width=10;
+const width=10; // FOR THE GRID
 const displayWidth=4; // FOR THE MINI GRID
+
+const displayScore=document.getElementById("displayScore"); // TO DISPLAY THE SCORE
+
+// BUTTONS
 const startOrPauseButton=document.getElementById("startOrPauseButton");
-const displayScore=document.getElementById("displayScore");
+const leftBtn=document.getElementById("leftBtn");
+const rotateBtn=document.getElementById("rotateBtn");
+const rightBtn=document.getElementById("rightBtn");
+const downBtn=document.getElementById("downBtn");
 
 // INDIVIDUAL TETROMINOES
 const lTetromino=[
@@ -311,8 +318,13 @@ startOrPauseButton.addEventListener("click", () => {
             refreshGame();
             isGameOver=false;
         }
-        timerID=setInterval(moveDown, 1000);
+        timerID=setInterval(moveDown, 700);
     }
 });
 
 document.addEventListener("keydown", control);
+
+leftBtn.addEventListener("click", () => { if(timerID != null) { moveLeft(); } });
+rotateBtn.addEventListener("click", () => { if(timerID != null) { rotateTetromino(); } });
+rightBtn.addEventListener("click", () => { if(timerID != null) { moveRight(); } });
+downBtn.addEventListener("click", () => { if(timerID != null) { moveDown(); } });
