@@ -50,17 +50,6 @@ h1, h2, h3 {
 
 }
 
-.button {
-    background-color: #008B8B;
-    color: #E0FFFF;
-    font-size: 18px;
-    padding: 3px 15px;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 15px;
-    outline: none;
-}
-
 table {
     margin: auto;
     margin-top: 12px;
@@ -68,4 +57,16 @@ table {
 
 td {
     padding: 10px;
+}
+
+.button {
+    background-color: #008B8B;
+    color: #E0FFFF;
+    font-size: 18px;
+    width: 100px;
+    padding: 3px 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 15px;
+    outline: none;
 }
