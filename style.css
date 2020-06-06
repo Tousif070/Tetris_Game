@@ -1,0 +1,45 @@
+body {
+    font-family: calibri;
+}
+.button {
+
+}
+
+.container {
+    display: flex;
+    margin-top: 20px;
+}
+
+.grid {
+    width: 200px;
+    height: 400px;
+    background-color: #FFE4B5;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mini-grid {
+    width: 80px;
+    height: 80px;
+    background-color: #FFE4B5;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+}
+
+.grid-blocks {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #C0C0C0;
+}
+
+.tetromino {
+    width: 18px;
+    height: 18px;
+    background-color: #FFA07A;
+}
+
+/* DEPENDING ON THIS CLASS, SOME LOGIC ARE APPLIED WITH JAVASCRIPT WHICH HELPS TO STOP THE TETROMINOES */
+.frozen {
+
+}
