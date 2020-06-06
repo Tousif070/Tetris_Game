@@ -1,45 +1,71 @@
 body {
     font-family: calibri;
+    text-align: center;
+    background-color: #D8BFD8;
 }
-.button {
 
+h1, h2, h3 {
+    color: #483D8B;
 }
 
 .container {
     display: flex;
-    margin-top: 20px;
 }
 
 .grid {
     width: 200px;
     height: 400px;
-    background-color: #FFE4B5;
+    background-color: #9BE1F0;
     display: flex;
     flex-wrap: wrap;
+    margin-left: auto;
+    border: 2px solid #808080;
 }
 
 .mini-grid {
     width: 80px;
     height: 80px;
-    background-color: #FFE4B5;
+    background-color: #93EAD5;
     display: flex;
     flex-wrap: wrap;
-    margin-left: 100px;
+    margin-right: auto;
+    margin-left: 20px;
+    border: 2px solid #808080;
 }
 
 .grid-blocks {
     width: 18px;
     height: 18px;
-    border: 1px solid #C0C0C0;
+    border: 1px solid #B0C4DE;
 }
 
 .tetromino {
     width: 18px;
     height: 18px;
-    background-color: #FFA07A;
+    background-color: #4682B4;
 }
 
 /* DEPENDING ON THIS CLASS, SOME LOGIC ARE APPLIED WITH JAVASCRIPT WHICH HELPS TO STOP THE TETROMINOES */
 .frozen {
 
+}
+
+.button {
+    background-color: #008B8B;
+    color: #E0FFFF;
+    font-size: 18px;
+    padding: 3px 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 15px;
+    outline: none;
+}
+
+table {
+    margin: auto;
+    margin-top: 12px;
+}
+
+td {
+    padding: 10px;
 }

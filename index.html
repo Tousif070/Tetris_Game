@@ -6,8 +6,8 @@
 
     <body>
 
-        <h3>Score: <span id="displayScore">0</span></h3>
-        <button id="startOrPauseButton" class="button">Start / Pause</button>
+        <h1>Tetris</h1>
+        <h2>Score: <span id="displayScore">0</span></h2>
 
         <div class="container">
 
@@ -20,7 +20,7 @@
                     }
                     for(let i=0; i<10; i++)
                     {
-                        document.write("<div class='grid-blocks frozen' style='border-color: white;'></div>");
+                        document.write("<div class='grid-blocks frozen' style='border: none;'></div>");
                     }
                 </script>
 
@@ -35,8 +35,31 @@
                     }
                 </script>
 
+                <h3>Next Tetromino</h3>
+
             </div>
 
+        </div>
+
+        <div>
+            <table>
+                <tr>
+                    <td colspan="3" align="center">
+                        <button id="startOrPauseButton" class="button">Start / Pause</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="leftBtn" class="button">Left</button>
+                    </td>
+                    <td>
+                        <button id="rotateBtn" class="button">Rotate</button>
+                    </td>
+                    <td>
+                        <button id="rightBtn" class="button">Right</button>
+                    </td>
+                </tr>
+            </table>
         </div>
 
     </body>
