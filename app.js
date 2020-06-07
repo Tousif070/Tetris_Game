@@ -5,6 +5,8 @@ const width=10; // FOR THE GRID
 const displayWidth=4; // FOR THE MINI GRID
 
 const displayScore=document.getElementById("displayScore"); // TO DISPLAY THE SCORE
+const displayHighScore=document.getElementById("displayHighScore"); // TO DISPLAY THE HIGH SCORE
+const displayHighScoreView=document.getElementById("displayHighScoreView"); // TO HIGHLIGHT THE NEW HIGH SCORE
 
 // BUTTONS
 const startOrPauseButton=document.getElementById("startOrPauseButton");
@@ -281,6 +283,17 @@ function gameOver()
         timerID=null;
         isGameOver=true;
         displayScore.innerHTML+=" Game Over !!!";
+
+        let newHighScore=getHighScoreFromCookie();
+        if(score > newHighScore) // SAVING THE NEW HIGH SCORE IN JAVASCRIPT COOKIE
+        {
+            setHighScoreInCookie("highScore", score, 90);
+            displayHighScore.innerHTML=score;
+            displayHighScoreView.style.color="#3D9FA2";
+            setTimeout(() => {
+                displayHighScoreView.style.color="";
+            }, 4000);
+        }
     }
 }
 
@@ -328,3 +341,31 @@ leftBtn.addEventListener("click", () => { if(timerID != null) { moveLeft(); } })
 rotateBtn.addEventListener("click", () => { if(timerID != null) { rotateTetromino(); } });
 rightBtn.addEventListener("click", () => { if(timerID != null) { moveRight(); } });
 downBtn.addEventListener("click", () => { if(timerID != null) { moveDown(); } });
+
+// FUNCTIONS FOR MANAGING HIGH SCORE WITH JAVASCRIPT COOKIES
+
+function displayHighScoreOnScreen()
+{
+    displayHighScore.innerHTML=getHighScoreFromCookie();
+}
+
+function setHighScoreInCookie(cookieName, cookieValue, days)
+{
+    let d=new Date();
+    d.setTime(d.getTime() + (days * 24 * 3600 * 1000));
+    let expires="expires=" + d.toUTCString();
+    let cookieString=cookieName + "=" + cookieValue + ";" + expires + ";path=/;";
+    document.cookie=cookieString;
+}
+
+function getHighScoreFromCookie()
+{
+    let highScoreFromCookie=0;
+    if(document.cookie != null && document.cookie != "")
+    {
+        let retrievedCookie=document.cookie;
+        let cookieArr=retrievedCookie.split("=");
+        highScoreFromCookie=cookieArr[1];
+    }
+    return highScoreFromCookie;
+}

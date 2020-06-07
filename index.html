@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
-    <body>
+    <body onload="displayHighScoreOnScreen()">
 
         <h1>Tetris</h1>
         <h2>Score: <span id="displayScore">0</span></h2>
@@ -38,8 +38,8 @@
 
                 <h3>Next Tetromino</h3>
 
-                <h3>
-                    High Score: <span id="highScore">0</span>
+                <h3 id="displayHighScoreView">
+                    High Score: <span id="displayHighScore"></span>
                 </h3>
 
             </div>
