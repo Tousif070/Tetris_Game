@@ -80,13 +80,18 @@ td {
 @media only screen and (max-height: 700px) {
 
     h1 {
-        margin-top: 0;
         margin-bottom: 0;
+        font-size: 24px;
     }
 
     h2 {
         margin-top: 0;
         margin-bottom: 0;
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
     }
 
     .button {
