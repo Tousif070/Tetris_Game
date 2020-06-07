@@ -1,85 +1,78 @@
+body {
+    font-family: calibri;
+    text-align: center;
+    background-color: #D8BFD8;
+}
 
+h1, h2, h3 {
+    color: #483D8B;
+}
 
-/* BASIC IMPLEMENTATION OF MEDIA QUERY */
-@media only screen and (max-width: 400px) {
+.container {
+    display: flex;
+}
 
-    body {
-        font-family: 'showcard gothic';
-        text-align: center;
-        background-color: orange;
-    }
+.grid {
+    width: 200px;
+    height: 400px;
+    background-color: #9BE1F0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    border: 2px solid #808080;
+}
 
-    h1, h2, h3 {
-        color: #483D8B;
-    }
+.mini-grid {
+    width: 80px;
+    height: 80px;
+    background-color: #93EAD5;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: auto;
+    margin-left: 20px;
+    border: 2px solid #808080;
+}
 
-    .container {
-        display: flex;
-    }
+.grid-blocks {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #B0C4DE;
+}
 
-    .grid {
-        width: 200px;
-        height: 400px;
-        background-color: #9BE1F0;
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: auto;
-        border: 2px solid #808080;
-    }
+.tetromino {
+    width: 18px;
+    height: 18px;
+    background-color: #4682B4;
+}
 
-    .mini-grid {
-        width: 80px;
-        height: 80px;
-        background-color: #93EAD5;
-        display: flex;
-        flex-wrap: wrap;
-        margin-right: auto;
-        margin-left: 20px;
-        border: 2px solid #808080;
-    }
+/* DEPENDING ON THIS CLASS, SOME LOGIC ARE APPLIED WITH JAVASCRIPT WHICH HELPS TO STOP THE TETROMINOES */
+.frozen {
 
-    .grid-blocks {
-        width: 18px;
-        height: 18px;
-        border: 1px solid #B0C4DE;
-    }
+}
 
-    .tetromino {
-        width: 18px;
-        height: 18px;
-        background-color: #4682B4;
-    }
+table {
+    margin: auto;
+    margin-top: 12px;
+}
 
-    /* DEPENDING ON THIS CLASS, SOME LOGIC ARE APPLIED WITH JAVASCRIPT WHICH HELPS TO STOP THE TETROMINOES */
-    .frozen {
+td {
+    padding: 6px;
+}
 
-    }
+.button {
+    background-color: #008B8B;
+    color: #E0FFFF;
+    font-size: 18px;
+    width: 100px;
+    padding: 16px 16px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 15px;
+    border-color: #E0FFFF;
+    outline: none;
+}
 
-    table {
-        margin: auto;
-        margin-top: 12px;
-    }
-
-    td {
-        padding: 6px;
-    }
-
-    .button {
-        background-color: #008B8B;
-        color: #E0FFFF;
-        font-size: 18px;
-        width: 100px;
-        padding: 16px 16px;
-        border-style: solid;
-        border-width: 2px;
-        border-radius: 15px;
-        border-color: #E0FFFF;
-        outline: none;
-    }
-
-    .button:active {
-        background-color: #E0FFFF;
-        color: #008B8B;
-    }
-
+.button:active {
+    background-color: #E0FFFF;
+    color: #008B8B;
 }
