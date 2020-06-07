@@ -81,9 +81,9 @@ td {
 @media only screen and (max-width: 400px) {
 
     body {
-        font-family: calibri;
+        font-family: 'showcard gothic';
         text-align: center;
-        background-color: #D8BFD8;
+        background-color: orange;
     }
 
     h1, h2, h3 {
