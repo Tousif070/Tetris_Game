@@ -226,7 +226,7 @@ function control(e)
         {
             moveLeft();
         }
-        else if(e.keyCode == 82)
+        else if(e.keyCode == 38)
         {
             rotateTetromino();
         }
@@ -331,7 +331,7 @@ startOrPauseButton.addEventListener("click", () => {
             refreshGame();
             isGameOver=false;
         }
-        timerID=setInterval(moveDown, 700);
+        timerID=setInterval(moveDown, 600);
     }
 });
 
