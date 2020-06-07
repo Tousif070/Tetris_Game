@@ -95,15 +95,15 @@ td {
     }
 
     table {
-        margin-top: 0;
+        margin-top: 8px;
     }
 
     td {
-        padding: 2px;
+        padding: 3px;
     }
 
     .button {
-        padding: 8px 16px;
+        padding: 10px 16px;
     }
 
 }
