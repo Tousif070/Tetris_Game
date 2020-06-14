@@ -287,7 +287,7 @@ function gameOver()
         let newHighScore=getHighScoreFromCookie();
         if(score > newHighScore) // SAVING THE NEW HIGH SCORE IN JAVASCRIPT COOKIE
         {
-            setHighScoreInCookie("highScore", score, 90);
+            setHighScoreInCookie("tetrisHighScoreGame1", score, 90);
             displayHighScore.innerHTML=score;
             displayHighScoreView.style.color="#3D9FA2";
             setTimeout(() => {
